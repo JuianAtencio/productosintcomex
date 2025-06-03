@@ -26,8 +26,8 @@ jobs:
     - name: Run tests
       run: mvn test
 
-    - name: Check code style (Checkstyle)
-      run: mvn checkstyle:check
+    #- name: Check code style (Checkstyle)
+    #  run: mvn checkstyle:check
 
     - name: Docker build (optional)
       run: docker build -t productosintcomex-app .

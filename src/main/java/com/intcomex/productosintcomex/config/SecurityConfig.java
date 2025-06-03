@@ -8,8 +8,18 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import com.intcomex.productosintcomex.security.JwtFilter;
 
+/**
+ * Configuración de seguridad para la aplicación.
+ */
 @Configuration
 public class SecurityConfig {
+    /**
+     * Esta configuración desactiva CSRF, permite el acceso a los endpoints de autenticación
+     *
+     * @param http la configuración de seguridad HTTP
+     * @return la cadena de filtros de seguridad configurada
+     * @throws Exception si ocurre un error al configurar la seguridad
+     */
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf().disable()

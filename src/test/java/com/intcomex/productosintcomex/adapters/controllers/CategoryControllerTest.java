@@ -27,6 +27,10 @@ class CategoryControllerTest {
         controller = new CategoryController(categoryService);
     }
 
+    /**
+     *  Test para crear una categoría.
+     *  Verifica que se guarda correctamente y se devuelve el DTO esperado.
+     */
     @Test
     void createCategory_ReturnsCreatedCategory() {
         CategoryDTO dto = new CategoryDTO();
@@ -44,6 +48,10 @@ class CategoryControllerTest {
         assertEquals(dto.getCategoryName(), response.getBody().getCategoryName());
     }
 
+    /**
+     * Test para obtener todas las categorías.
+     * Verifica que se devuelve una lista con las categorías esperadas.
+     */
     @Test
     void getAllCategories_ReturnsList() {
         CategoryDTO dto = new CategoryDTO();
@@ -60,6 +68,10 @@ class CategoryControllerTest {
         assertEquals("TestCat", response.getBody().get(0).getCategoryName());
     }
 
+    /** 
+     * Test para obtener una categoría por ID.
+     * Verifica que se encuentra la categoría y se devuelve el DTO correcto.
+     */
     @Test
     void getCategoryById_Found() {
         CategoryDTO dto = new CategoryDTO();
@@ -76,6 +88,10 @@ class CategoryControllerTest {
         assertEquals("TestCat", response.getBody().getCategoryName());
     }
 
+    /**
+     * Test para obtener una categoría por ID que no existe.
+     * Verifica que se devuelve un 404 Not Found.
+     */
     @Test
     void getCategoryById_NotFound() {
         when(categoryService.findById(2)).thenReturn(Optional.empty());

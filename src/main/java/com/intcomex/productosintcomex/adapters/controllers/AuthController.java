@@ -8,6 +8,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/auth")
 public class AuthController {
 
+    /**
+     * Endpoint para autenticación de usuarios.
+     * Genera un token JWT si las credenciales son válidas.
+     * @param username
+     * @param password
+     * @return
+     */
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestParam String username, @RequestParam String password) {
         String token = JwtUtil.generateToken(username);

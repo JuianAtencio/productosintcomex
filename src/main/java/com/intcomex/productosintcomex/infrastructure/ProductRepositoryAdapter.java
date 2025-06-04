@@ -36,20 +36,6 @@ public class ProductRepositoryAdapter implements ProductRepository {
                 .map(ProductMapper::toDomain)
                 .collect(Collectors.toList());
     }
-/* 
-    @Override
-    public Page<Product> findAllPaged(String name, Integer categoryId, Pageable pageable) {
-        Page<ProductEntity> page = productJpaRepository.findByProductNameContainingIgnoreCaseAndCategoryId(
-            name != null ? name : "",
-            categoryId,
-            pageable
-        );
-        return page.map(ProductMapper::toDomain);
-    }*/
-
-    /*Con esto, si name o categoryId son null, el filtro se ignora y la búsqueda es más flexible.
-     * Aquí cómo hacer que el filtro por categoría sea opcional usando una consulta personalizada en tu repositorio JPA:
-    */
     
     @Override
     public Page<Product> findAllPaged(String name, Integer categoryId, Pageable pageable) {

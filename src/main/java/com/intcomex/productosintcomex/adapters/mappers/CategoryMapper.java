@@ -6,6 +6,12 @@ import com.intcomex.productosintcomex.adapters.dto.CategoryDTO;
 
 public class CategoryMapper {
 
+    /**
+     * Convierte un objeto Category a su representación DTO.
+     * Si el objeto Category es null, devuelve null.
+     * @param category
+     * @return
+     */
     public static CategoryDTO toDTO(Category category) {
         if (category == null) return null;
         CategoryDTO dto = new CategoryDTO();
@@ -16,6 +22,12 @@ public class CategoryMapper {
         return dto;
     }
 
+    /**
+     * Convierte un objeto CategoryDTO a su representación de dominio.
+     * Si el objeto CategoryDTO es null, devuelve null.
+     * @param dto
+     * @return
+     */
     public static Category toDomain(CategoryDTO dto) {
         if (dto == null) return null;
         Category category = new Category();
@@ -26,6 +38,11 @@ public class CategoryMapper {
         return category;
     }
 
+    /**
+     * Convierte un objeto Category a su representación de entidad.
+     * @param category
+     * @return
+     */
     public static CategoryEntity toEntity(Category category) {
         if (category == null) return null;
         CategoryEntity entity = new CategoryEntity();
@@ -36,6 +53,12 @@ public class CategoryMapper {
         return entity;
     }
 
+    /**
+     * Convierte un objeto CategoryEntity a su representación de dominio.
+     * Si el objeto CategoryEntity es null, devuelve null.
+     * @param entity
+     * @return
+     */
     public static Category toDomain(CategoryEntity entity) {
         if (entity == null) return null;
         Category category = new Category();

@@ -13,6 +13,10 @@ import java.io.IOException;
 import java.util.Collections;
 
 public class JwtFilter extends OncePerRequestFilter {
+    
+    /**
+     * 
+     */
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
             throws ServletException, IOException {

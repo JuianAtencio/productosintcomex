@@ -6,6 +6,12 @@ import com.intcomex.productosintcomex.infrastructure.entity.ProductEntity;
 
 public class ProductMapper {
 
+    /**
+     * Convierte un objeto Product a su representación DTO.
+     * Si el objeto Product es null, devuelve null.
+     * @param product
+     * @return
+     */
     public static ProductDTO toDTO(Product product) {
         if (product == null) return null;
         ProductDTO dto = new ProductDTO();
@@ -22,6 +28,12 @@ public class ProductMapper {
         return dto;
     }
 
+    /**
+     * Convierte un objeto ProductDTO a su representación de dominio.
+     * Si el objeto ProductDTO es null, devuelve null.
+     * @param dto
+     * @return
+     */
     public static Product toDomain(ProductDTO dto) {
         if (dto == null) return null;
         Product product = new Product();
@@ -38,6 +50,12 @@ public class ProductMapper {
         return product;
     }
 
+    /**
+     * Convierte un objeto Product a su representación de entidad.
+     * Si el objeto Product es null, devuelve null.
+     * @param product
+     * @return
+     */
     public static ProductEntity toEntity(Product product) {
         if (product == null) return null;
         ProductEntity entity = new ProductEntity();
@@ -54,6 +72,12 @@ public class ProductMapper {
         return entity;
     }
 
+    /**
+     *  Convierte un objeto ProductEntity a su representación de dominio.
+     *  Si el objeto ProductEntity es null, devuelve null.
+     * @param entity
+     * @return
+     */
     public static Product toDomain(ProductEntity entity) {
         if (entity == null) return null;
         Product product = new Product();

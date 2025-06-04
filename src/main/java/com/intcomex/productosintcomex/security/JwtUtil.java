@@ -9,6 +9,11 @@ import java.util.Date;
 public class JwtUtil {
     private static final String SECRET_KEY = "clave-secreta-demo";
 
+    /**
+     * Genera un token JWT para el usuario.
+     * @param username
+     * @return
+     */
     public static String generateToken(String username) {
         return Jwts.builder()
                 .setSubject(username)

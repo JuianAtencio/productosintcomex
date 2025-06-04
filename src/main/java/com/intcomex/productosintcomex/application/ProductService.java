@@ -28,7 +28,6 @@ public class ProductService {
     }
 
     public Page<Product> findAllPaged(String name, Integer categoryId, Pageable pageable) {
-        // Este método debe delegar la consulta a tu repositorio adaptador
         return productRepository.findAllPaged(name, categoryId, pageable);
     }
 
@@ -42,6 +41,16 @@ public class ProductService {
 
     public List<Product> saveAll(List<Product> products) {
         return productRepository.saveAll(products);
+    }
+
+    public Product updatePrice(Integer id, Double newPrice) {
+        Optional<Product> optional = findById(id);
+        if (optional.isPresent()) {
+            Product product = optional.get();
+            product.setUnitPrice(newPrice);
+            return save(product);
+        }
+        return null;
     }
 
 }

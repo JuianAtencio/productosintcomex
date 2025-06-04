@@ -15,6 +15,10 @@ class ProductRepositoryAdapterIT {
     @Autowired
     private ProductRepositoryAdapter adapter;
 
+    /** 
+     * Valido que el método save y findById funcionan correctamente.
+     * Se crea un producto, se guarda y luego se busca por ID.
+     */
     @Test
     void testSaveAndFind() {
         Product product = new Product();

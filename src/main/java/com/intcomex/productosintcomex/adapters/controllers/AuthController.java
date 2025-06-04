@@ -10,7 +10,6 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestParam String username, @RequestParam String password) {
-        // Demo: acepta cualquier usuario/clave
         String token = JwtUtil.generateToken(username);
         return ResponseEntity.ok(token);
     }

@@ -1,0 +1,62 @@
+[
+  {
+    "categoryId": 1,
+    "categoryName": "Categoría 1",
+    "description": "Descripción de la categoría 1",
+    "picture": "https://example.com/pictures/categoria_1.jpg"
+  },
+  {
+    "categoryId": 2,
+    "categoryName": "Categoría 2",
+    "description": "Descripción de la categoría 2",
+    "picture": "https://example.com/pictures/categoria_2.jpg"
+  },
+  {
+    "categoryId": 3,
+    "categoryName": "Categoría 3",
+    "description": "Descripción de la categoría 3",
+    "picture": "https://example.com/pictures/categoria_3.jpg"
+  },
+  {
+    "categoryId": 4,
+    "categoryName": "Categoría 4",
+    "description": "Descripción de la categoría 4",
+    "picture": "https://example.com/pictures/categoria_4.jpg"
+  },
+  {
+    "categoryId": 5,
+    "categoryName": "Categoría 5",
+    "description": "Descripción de la categoría 5",
+    "picture": "https://example.com/pictures/categoria_5.jpg"
+  },
+  {
+    "categoryId": 6,
+    "categoryName": "Categoría 6",
+    "description": "Descripción de la categoría 6",
+    "picture": "https://example.com/pictures/categoria_6.jpg"
+  },
+  {
+    "categoryId": 7,
+    "categoryName": "Categoría 7",
+    "description": "Descripción de la categoría 7",
+    "picture": "https://example.com/pictures/categoria_7.jpg"
+  },
+  {
+    "categoryId": 8,
+    "categoryName": "Categoría 8",
+    "description": "Descripción de la categoría 8",
+    "picture": "https://example.com/pictures/categoria_8.jpg"
+  },
+  {
+    "categoryId": 9,
+    "categoryName": "Categoría 9",
+    "description": "Descripción de la categoría 9",
+    "picture": "https://example.com/pictures/categoria_9.jpg"
+  },
+  {
+    "categoryId": 10,
+    "categoryName": "Categoría 10",
+    "description": "Descripción de la categoría 10",
+    "picture": "https://example.com/pictures/categoria_10.jpg"
+  }
+]

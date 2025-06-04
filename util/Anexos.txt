@@ -1,0 +1,72 @@
+POST http://localhost:8080/auth/login
+en Body: username: prueba
+         password: prueba
+
+Crear Categoría		 
+POST http://localhost:8080/Category/
+Authorization    Bearer Token  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmEiLCJpYXQiOjE3NDkwNTQzMjksImV4cCI6MTc0OTE0MDcyOX0.pEeUb1NOzOpsJkW7E0gl2ANAVxWdwRRCMXePgACrrAI
+
+Listar categoría
+GET http://localhost:8080/Category/
+Authorization    Bearer Token  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmEiLCJpYXQiOjE3NDkwNTQzMjksImV4cCI6MTc0OTE0MDcyOX0.pEeUb1NOzOpsJkW7E0gl2ANAVxWdwRRCMXePgACrrAI
+
+Crear Producto
+POST http://localhost:8080/Product/
+Authorization    Bearer Token  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmEiLCJpYXQiOjE3NDkwNTQzMjksImV4cCI6MTc0OTE0MDcyOX0.pEeUb1NOzOpsJkW7E0gl2ANAVxWdwRRCMXePgACrrAI
+Body:
+{
+  "productName": "producto uno",
+  "supplierId": null,
+  "categoryId": 1,
+  "quantityPerUnit": "una unidad",
+  "unitPrice": 2500.00,
+  "unitsInStock": 10,
+  "unitsOnOrder": 0,
+  "reorderLevel": 2,
+  "discontinued": false
+}
+
+
+Carga Masiva Productos
+POST http://localhost:8080/Product/bulk
+Authorization    Bearer Token  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmEiLCJpYXQiOjE3NDkwNTQzMjksImV4cCI6MTc0OTE0MDcyOX0.pEeUb1NOzOpsJkW7E0gl2ANAVxWdwRRCMXePgACrrAI
+Body:
+[ {
+    "productName": "Producto 100993",
+    "supplierId": 2,
+    "categoryId": 10,
+    "quantityPerUnit": "3 unidades",
+    "unitPrice": 220.78,
+    "unitsInStock": 16,
+    "unitsOnOrder": 0,
+    "reorderLevel": 19,
+    "discontinued": true
+  },
+  {
+    "productName": "Producto 100994",
+    "supplierId": 1,
+    "categoryId": 8,
+    "quantityPerUnit": "13 unidades",
+    "unitPrice": 215.7,
+    "unitsInStock": 2,
+    "unitsOnOrder": 22,
+    "reorderLevel": 3,
+    "discontinued": false
+  }
+]
+
+Listar Productos con paginacion
+GET http://localhost:8080/Product/?page=0&size=10&name=Producto 1&categoryId=2
+Authorization    Bearer Token  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmEiLCJpYXQiOjE3NDkwNTQzMjksImV4cCI6MTc0OTE0MDcyOX0.pEeUb1NOzOpsJkW7E0gl2ANAVxWdwRRCMXePgACrrAI
+
+Detalle de producto:
+GET: http://localhost:8080/Product/2
+Authorization    Bearer Token  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmEiLCJpYXQiOjE3NDkwNTQzMjksImV4cCI6MTc0OTE0MDcyOX0.pEeUb1NOzOpsJkW7E0gl2ANAVxWdwRRCMXePgACrrAI
+
+Borrar producto:
+DELETE http://localhost:8080/Product/5
+Authorization    Bearer Token  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmEiLCJpYXQiOjE3NDkwNTQzMjksImV4cCI6MTc0OTE0MDcyOX0.pEeUb1NOzOpsJkW7E0gl2ANAVxWdwRRCMXePgACrrAI
+
+Actualizar Precio de Producto
+PUT http://localhost:8080/Product/2/price
+Authorization    Bearer Token  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmEiLCJpYXQiOjE3NDkwNTQzMjksImV4cCI6MTc0OTE0MDcyOX0.pEeUb1NOzOpsJkW7E0gl2ANAVxWdwRRCMXePgACrrAI
